@@ -1,3 +1,11 @@
 echo "node_modules/" >> .gitignore
 echo ".env" >> .gitignore
 echo "dist/" >> .gitignore
+node_modules
+build
+npm-debug.log
+.nyc
+.env
+.DS_Store
+/src/invoices/
+.gitignore
