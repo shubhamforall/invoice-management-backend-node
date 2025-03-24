@@ -1,5 +1,5 @@
 const Vehicle = require('../models/vehicleModel');
-
+const { applyFilters } = require("../utils/filterUtils");
 // Create Vehicle
 const createVehicle = async (req, res) => {
   try {
