@@ -12,8 +12,10 @@ const paymentRoutes = require('./routes/paymentRoutes');
 const app = express();
 
 // Middleware
+const allowedOrigin = process.env.CORS_ALLOWED_ORIGINS 
+
 app.use(cors({
-  origin: "http://localhost:3000",
+  origin: allowedOrigin,  // Use the single allowed origin
   methods: ["GET", "POST", "PATCH", "DELETE"],
   credentials: true,
   exposedHeaders: ["Content-Disposition"]
