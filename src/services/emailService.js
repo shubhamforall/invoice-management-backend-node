@@ -7,9 +7,7 @@ const sendInvoiceEmail = async (customerEmail, pdfPath) => {
     console.log("Email Password Length:", process.env.EMAIL_PASSWORD ? process.env.EMAIL_PASSWORD.length : 0);
 
     let transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
-    secure: false,
+        service: 'gmail',
         auth: {
             user: process.env.EMAIL,
             pass: process.env.EMAIL_PASSWORD
