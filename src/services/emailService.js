@@ -3,6 +3,9 @@ const fs = require('fs');
 require('dotenv').config();
 
 const sendInvoiceEmail = async (customerEmail, pdfPath) => {
+    console.log("Email User:", process.env.EMAIL);
+    console.log("Email Password Length:", process.env.EMAIL_PASSWORD ? process.env.EMAIL_PASSWORD.length : 0);
+
     let transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 587,
