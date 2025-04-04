@@ -13,16 +13,8 @@ app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
 
-process.on("SIGTERM", () => {
-  console.log("❌ SIGTERM received, shutting down server...");
-  process.exit(1);
-});
+console.log("📧 Email User:", process.env.EMAIL);
+console.log("🔑 Email Password Present:", process.env.EMAIL_PASSWORD ? "Yes" : "No");
 
-process.on("uncaughtException", (err) => {
-  console.error("❌ Uncaught Exception:", err);
-  process.exit(1);
-});
 
-process.on("unhandledRejection", (reason, promise) => {
-  console.error("❌ Unhandled Promise Rejection:", reason);
-});
+
